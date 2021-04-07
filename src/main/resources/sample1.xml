@@ -1,0 +1,8 @@
+<user>
+    <name attr="dfsdf">artem</name>
+    <age>645</age>
+        "isMale": true,
+        "children": ["max", "nick"],
+        "wife": {
+        "name": "dfsdf"
+</user>

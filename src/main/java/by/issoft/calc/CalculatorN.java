@@ -1,4 +1,4 @@
-package calc;
+package by.issoft.calc;
 import java.util.Scanner;
 @Deprecated
 public class CalculatorN {

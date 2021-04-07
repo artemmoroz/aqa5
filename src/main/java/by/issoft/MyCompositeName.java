@@ -1,3 +1,5 @@
+package by.issoft;
+
 public class MyCompositeName {
 
     String name;

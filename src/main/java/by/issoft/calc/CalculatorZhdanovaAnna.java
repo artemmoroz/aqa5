@@ -1,4 +1,4 @@
-package calc;
+package by.issoft.calc;
 
 
 public class CalculatorZhdanovaAnna {

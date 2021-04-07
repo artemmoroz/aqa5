@@ -1,3 +1,5 @@
+package by.issoft;
+
 public class FirstClass {
 
     public int x = 3;//0,1,2,-456  -- 0

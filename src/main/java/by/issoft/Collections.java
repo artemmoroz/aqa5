@@ -1,3 +1,5 @@
+package by.issoft;
+
 import javafx.beans.property.ReadOnlyListWrapper;
 import lombok.AllArgsConstructor;
 import lombok.Data;

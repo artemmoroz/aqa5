@@ -1,7 +1,4 @@
-package calc;
-
-import lombok.Data;
-import lombok.experimental.Accessors;
+package by.issoft.calc;
 
 import java.util.Scanner;
 
