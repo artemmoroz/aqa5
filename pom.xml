@@ -24,6 +24,14 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.11.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.3.3</version>
+        </dependency>
+
+
     </dependencies>
 
     <repositories>

@@ -1,5 +1,6 @@
 package by.issoft.files;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -36,7 +37,8 @@ public class ReadFiles {
 
         //String content = new String(Files.readAllBytes(Paths.get(path)),"UTF-8");
         ObjectMapper mapper = new ObjectMapper();
-        User user = mapper.readValue(new File(path), User.class);
+        User user = mapper.readValue(new File(path), new TypeReference<User>() {
+        });
         System.out.println(user);
         user.setName("Alex");
 
