@@ -27,6 +27,13 @@ public class MainClass {
         cottage.addCalculable(new Flat(1, 270, 3));
         lenina.addCalculable(cottage);
 
+
+        Bakery bakery = new Bakery();
+        lenina.addCalculable(bakery);
+
+        Office office = new Office();
+        lenina.addCalculable(office);
+
         System.out.println("Total cost for "+lenina.getName() + " is "+lenina.calculateCost());
 
     }

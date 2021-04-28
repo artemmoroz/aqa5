@@ -8,7 +8,7 @@ import java.util.List;
 
 @Data
 @Accessors(chain = true)
-public class House extends CalculableStore {
+public abstract class House extends CalculableStore {
 
     int number;
     int coefficient;

@@ -3,7 +3,7 @@ package by.issoft.street;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
-public interface Calculable {
-
-   double calculateCost();
+@Data
+@Accessors(chain = true)
+public class Office extends CalculableStore2{
 }

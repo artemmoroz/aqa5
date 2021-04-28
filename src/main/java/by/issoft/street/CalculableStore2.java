@@ -8,7 +8,7 @@ import java.util.List;
 
 @Data
 @Accessors(chain = true)
-public class CalculableStore implements Calculable{
+public class CalculableStore2 implements Calculable{
 
     List<Calculable> calculables = new ArrayList<>();
 

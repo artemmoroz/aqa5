@@ -3,9 +3,11 @@ package by.issoft.street;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 @Data
 @Accessors(chain = true)
-public class Flat extends Calculable{
+public class Flat implements Calculable{
 
     int number;
     int square;
@@ -17,6 +19,7 @@ public class Flat extends Calculable{
         this.people = people;
     }
 
+    @Override
     public double calculateCost() {
         return square*people*10;
     }
