@@ -19,6 +19,7 @@ public class FirstClass {
         firstClass.myFirstMethod();
         firstClass.mySecondMethod(6);
         firstClass.myThirdMethod(3);
+
     }
 
 

@@ -8,8 +8,8 @@
 <!--    <listeners>-->
 <!--        <listener class-name="by.issoft.testng.SampleListener"></listener>-->
 <!--    </listeners>-->
-
-    <test name="Store Test">
+//login
+    <test name="Email Tests">
          <classes>
              <class name="by.issoft.testng.MyFirstTest">
                  <parameter name="www" value="Ar44tem"></parameter>
