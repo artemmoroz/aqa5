@@ -16,7 +16,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class OlgaYandexMail {
 
 
-    String loginInput = "passp-field-login";
+    String loginInput = "passp-field-login1";
 
     @BeforeMethod
     public void login(){
