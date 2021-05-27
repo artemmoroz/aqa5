@@ -23,7 +23,7 @@ public class YandexSearchPage {
 
     public boolean getEmailState(String name){
         //....
-
+return false;
     }
 
     public void validateEmailSent2(String name){

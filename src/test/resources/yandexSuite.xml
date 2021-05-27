@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding ="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="YandexTest">
+    <test name="SendEmail">
+
+        <classes>
+            <class name="by.issoft.sendEmail.SendEmailTest">
+                <parameter name="un" value="autotest.java"></parameter>
+                <parameter name="pwd" value="zUtG8FZf3NnCvmB"></parameter>
+
+            </class>
+        </classes>
+    </test>
+</suite>

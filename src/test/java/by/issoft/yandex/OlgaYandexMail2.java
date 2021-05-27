@@ -20,9 +20,9 @@ public class OlgaYandexMail2{
         YandexSearchPage searchPage = new YandexSearchPage();
 
         searchPage.doSearch("xxxx");
-        searchPage.doSearch2("xxxx");
-        searchPage.doSearch3("xxxx");
-        searchPage.doSearch4("xxxx");
+//        searchPage.doSearch2("xxxx");
+//        searchPage.doSearch3("xxxx");
+//        searchPage.doSearch4("xxxx");
 
         Assert.assertTrue(searchPage.getEmailState("vvv"));
     }
