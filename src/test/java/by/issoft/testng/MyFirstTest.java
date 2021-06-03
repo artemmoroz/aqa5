@@ -1,5 +1,7 @@
 package by.issoft.testng;
 
+import by.issoft.reporting.SampleListener;
+import com.codeborne.selenide.Selenide;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import org.testng.Assert;
@@ -7,17 +9,17 @@ import org.testng.annotations.*;
 
 import java.nio.file.Files;
 
-
-public class MyFirstTest extends BaseTest{
+@Listeners(SampleListener.class)
+public class MyFirstTest extends BaseTest {
 
 
     @BeforeMethod
-    public void bbb(){
+    public void bbb() {
         System.out.println("im logging in");
     }
 
     @AfterMethod
-    public void ccc(){
+    public void ccc() {
         System.out.println("logout");
     }
 
@@ -36,7 +38,7 @@ public class MyFirstTest extends BaseTest{
 
     @Test(dataProvider = "nameArray")
     public void doTest2(String name, int age) {
-
+        Selenide.open("https://ya.ru/");
         Assert.assertTrue(name.length() > 5, "Name is to short");
     }
 
