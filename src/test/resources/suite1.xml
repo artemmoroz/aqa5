@@ -8,7 +8,6 @@
 <!--    <listeners>-->
 <!--        <listener class-name="by.issoft.testng.SampleListener"></listener>-->
 <!--    </listeners>-->
-//login
     <test name="Email Tests">
          <classes>
              <class name="by.issoft.testng.MyFirstTest">

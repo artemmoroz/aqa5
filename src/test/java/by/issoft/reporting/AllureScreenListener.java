@@ -13,7 +13,7 @@ import org.testng.ITestResult;
 
 @Data
 @Accessors(chain = true)
-public class SampleListener implements ITestListener {
+public class AllureScreenListener implements ITestListener {
     @Override
     public void onTestStart(ITestResult result) {
 

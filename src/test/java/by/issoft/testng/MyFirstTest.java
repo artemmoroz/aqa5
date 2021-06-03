@@ -1,15 +1,11 @@
 package by.issoft.testng;
 
-import by.issoft.reporting.SampleListener;
+import by.issoft.reporting.AllureScreenListener;
 import com.codeborne.selenide.Selenide;
-import lombok.Data;
-import lombok.experimental.Accessors;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-import java.nio.file.Files;
-
-@Listeners(SampleListener.class)
+@Listeners(AllureScreenListener.class)
 public class MyFirstTest extends BaseTest {
 
 
