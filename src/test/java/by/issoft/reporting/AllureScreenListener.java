@@ -2,6 +2,7 @@ package by.issoft.reporting;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
+import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -11,32 +12,30 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-@Data
-@Accessors(chain = true)
+import java.io.ByteArrayInputStream;
+
 public class AllureScreenListener implements ITestListener {
     @Override
     public void onTestStart(ITestResult result) {
-
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-
+        screen();
     }
+
+    @Attachment(value = "Page success screenshot", type = "image/png")//2
+    public byte[] screen(){
+        byte[] screenshot = Selenide.screenshot(OutputType.BYTES);
+        return screenshot;
+    }
+
 
     @Override
     public void onTestFailure(ITestResult result) {
-        //
-        System.out.println("im failed "+result.getName());
-        saveScreenshot();
+        byte[] screenshot = Selenide.screenshot(OutputType.BYTES);
+        Allure.addAttachment("Page screenshot"+result.getName(), new ByteArrayInputStream(screenshot));//1
     }
-
-
-    @Attachment(value = "Page screenshot", type = "image/png")
-    public byte[] saveScreenshot() {
-        return ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
-    }
-
 
     @Override
     public void onTestSkipped(ITestResult result) {
@@ -57,4 +56,19 @@ public class AllureScreenListener implements ITestListener {
     public void onFinish(ITestContext context) {
 
     }
+
+
+//    @Override
+//    public void onTestFailure(ITestResult result) {
+//        //
+//        System.out.println("im failed "+result.getName());
+//        saveScreenshot();
+//    }
+//
+//
+//    @Attachment(value = "Page screenshot", type = "image/png")
+//    public byte[] saveScreenshot() {
+//        return ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
+//    }
+
 }

@@ -1,17 +1,27 @@
 package by.issoft.testng;
 
 import by.issoft.reporting.AllureScreenListener;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.testng.ScreenShooter;
+import org.openqa.selenium.MutableCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-@Listeners(AllureScreenListener.class)
+import java.util.Map;
+
 public class MyFirstTest extends BaseTest {
 
+
+    @BeforeSuite
+    public void aaa(){
+        ScreenShooter.captureSuccessfulTests = true;
+    }
 
     @BeforeMethod
     public void bbb() {
         System.out.println("im logging in");
+
     }
 
     @AfterMethod
@@ -23,6 +33,16 @@ public class MyFirstTest extends BaseTest {
     @Test
     @Parameters({"www", "age"})
     public void doTest(String userName, int age) {
+
+        Configuration.startMaximized = true;
+        Configuration.headless = true;
+
+        Map<String, String> caps;
+        MutableCapabilities mutableCapabilities = new MutableCapabilities();
+        mutableCapabilities.setCapability("key", "value");
+
+        Configuration.browserCapabilities = mutableCapabilities;
+
         System.out.println(userName + " -- " + age);
         //read from file//
         //Files.readAllBytes()
@@ -30,6 +50,9 @@ public class MyFirstTest extends BaseTest {
         int actual = 2 + 2;
         int expected = 5;
         Assert.assertEquals(actual, expected, "users quantity not equals");
+
+        Object a = Selenide.executeJavaScript("return 10;");
+
     }
 
     @Test(dataProvider = "nameArray")
