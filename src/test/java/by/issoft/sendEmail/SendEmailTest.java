@@ -20,7 +20,7 @@ public class SendEmailTest {
         open("https://yandex.by/");
        // YandexStartPage yandexStartPage = new YandexStartPage();
 
-        yandexStartPage.getLoginButton().click();
+        yandexStartPage.getLoginButton().pressEnter();
 
         //clickLoginButton();
 
